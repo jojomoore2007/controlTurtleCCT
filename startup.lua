@@ -4,7 +4,7 @@ run = true
 local oldpull = os.pullEvent
 os.pullEvent = os.pullEventRaw
 sha256 = require 'sha256'
-p = fs.open('passwd','r')
+local p = fs.open('passwd','r')
 local passwd = p.readAll()
 p.close()
 function verify(msg,id)
